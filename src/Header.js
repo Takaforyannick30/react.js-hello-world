@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 
 
 class Header extends Component {
+    sayhello(name){
+        return "hello" + name
+    }
     render() {
+      const myName = "Tikelo"
       return(
-        <div className="App-header">
-        {
-        //   <img src={logo} className="App-logo" alt="logo" />
-          
-        }
+        <div className="App">
+            <h2>Just some sample data:{this.sayhello(myName)}</h2>
+       
         </div>
       );
     }
