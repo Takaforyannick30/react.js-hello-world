@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+
 
 class App extends Component{
   render() {
@@ -14,15 +16,6 @@ class App extends Component{
   }
   }
 
-  class Header extends Component {
-    render() {
-      return(
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-      );
-    }
-  }
 
   class Intro extends Component {
     render() {
