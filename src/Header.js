@@ -2,6 +2,14 @@ import React, {Component} from 'react';
 
 
 class Header extends Component {
+
+    constructor(props){
+        super(props);
+        this.yourname = "Tike"
+        this.state = {};
+    }
+
+
     sayhello(name){
         return "hello" + name
     }
@@ -9,7 +17,7 @@ class Header extends Component {
       const myName = "Tikelo"
       return(
         <div className="App">
-            <h2>Just some sample data:{this.sayhello(myName)}</h2>
+            <h2>Just some sample data:{this.yourname}</h2>
        
         </div>
       );
