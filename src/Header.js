@@ -31,17 +31,32 @@ class Parent extends Component {
         return(
             <div>
                 <h1>I am the parent</h1>
-                <Cars />
+                <Cars msg="cars are cools" model="45644" ride={this.props.cars}/>
             </div>
         );
     }
 }
 
+Parent.defaultProps = {
+  cars: ['BMW', 'MERC', 'TOYOTA', 'TESLA']
+}
+
 class Cars extends Component{
     render(){
+        console.log(this.props)
         return(
             <div>
-                I am from cars component
+              <p> I am from cars component</p>
+              <p>{this.props.msg}</p>
+              <p>{this.props.model}</p>
+              <p>{this.props.ride.map((item, i) => {
+                  return " "+item;
+              })}</p>
+
+
+              
+              
+
             </div>
         );
     }
